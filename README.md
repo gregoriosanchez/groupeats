@@ -31,15 +31,15 @@
 
 
 ## Technologies
-*	Backend
-	- Node.js
-	- JavaScript
-  -	Express.js
-  - MongoDB
-*	Frontend
-  - react.js
-  - JavaScript
-  - Redux
+* Backend 
+- Node.js
+- JavaScript
+- Express.js
+- MongoDB
+* Frontend
+- react.js
+- JavaScript
+- Redux
   
 # Project Structure
 *	Backend: MVC
