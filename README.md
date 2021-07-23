@@ -31,12 +31,13 @@
 
 
 ## Technologies
-* Backend 
+Backend 
 - Node.js
 - JavaScript
 - Express.js
 - MongoDB
-* Frontend
+
+Frontend
 - react.js
 - JavaScript
 - Redux
