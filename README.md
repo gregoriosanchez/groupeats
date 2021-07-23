@@ -1,51 +1,49 @@
 # groupeats
-Project Eats Practice
-Features
-•	Authentication (register and signin) and Authorizations
-•	Address seeker
-•	Food and Restaurant seeker 
-•	Map
-•	Restaurant management
-•	Order history
-•	Order management
-•	Ingredients *** (Nice to have)
-•	Cart management (confirm order)
-•	Checkout
-•	Payments
-•	Region determination** (Nice to have)
-•	Rating ** (Nice to have)
 
-Entities
-•	Restaurant
-•	Restaurant type
-•	Dish
-•	Ingredients 
-•	Category
-•	Price
-•	User
-•	Personal Information
-•	Role
-•	Cart
-•	Order
-•	Bill
+## Features
+* Authentication (register and signin) and Authorizations
+*	Address seeker
+*	Food and Restaurant seeker 
+*	Map
+*	Restaurant management
+*	Order history
+*	Order management
+*	Ingredients *** (Nice to have)
+*	Cart management (confirm order)
+*	Checkout
+*	Payments
+*	Region determination** (Nice to have)
+*	Rating ** (Nice to have)
 
-
-Technologies
-•	Backend
-o	Node.js
-o	JavaScript
-o	Express.js
-o	MongoDB
-•	Frontend
-o	react.js
-o	JavaScript
-o	Redux
+## Entities
+*	Restaurant
+*	Restaurant type
+*	Dish
+*	Ingredients 
+*	Category
+*	Price
+*	User
+*	Personal Information
+*	Role
+*	Cart
+*	Order
+*	Bill
 
 
-
-Project Structure
-•	Backend: MVC
-•	Frontend: Atomic
+## Technologies
+*	Backend
+	- Node.js
+	- JavaScript
+  -	Express.js
+  - MongoDB
+*	Frontend
+  - react.js
+  - JavaScript
+  - Redux
+  
+# Project Structure
+*	Backend: MVC
+*	Frontend: Atomic
 
 https://saurabhshah23.medium.com/react-js-architecture-features-folder-structure-design-pattern-70b7b9103f22
 
