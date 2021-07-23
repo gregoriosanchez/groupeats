@@ -49,4 +49,3 @@ Frontend
 https://saurabhshah23.medium.com/react-js-architecture-features-folder-structure-design-pattern-70b7b9103f22
 
 https://cheesecakelabs.com/blog/efficient-way-structure-react-native-projects/
-![image](https://user-images.githubusercontent.com/3135326/126729546-63c0340a-da1f-485a-8ffd-af5b27553b23.png)
