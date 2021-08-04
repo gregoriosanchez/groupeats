@@ -35,6 +35,7 @@ Backend
 - JavaScript
 - Express.js
 - MongoDB
+- GraphQL
 
 Frontend
 - react.js
