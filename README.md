@@ -21,7 +21,6 @@
 *	Dish
 *	Ingredients 
 *	Category
-*	Price
 *	User
 *	Personal Information
 *	Role
