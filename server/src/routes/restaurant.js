@@ -1,36 +1,39 @@
 const express = require("express");
 const router = express.Router()
-const Restaurant = require('../models/restaurant')
+const restaurantController = require('../controllers/restaurantController')
 
 router.get("/", async(req, res)=>{
     //TODO: Get all
-    res.status(200).send(Restaurant)
+    const restaurant = restaurantController.getRestaurants()
+    res.status(200).send(restaurant)
 })
 
 router.get("/:id", async(req, res)=>{
     //TODO: Get one by id
-    const restaurant = Restaurant.filter((x)=>x._id === req.params.id)[0]
+    const restaurant = restaurantController.getRestaurantById(req.params.id)
     res.status(200).send(restaurant)
 })
 
 router.post("/", async(req, res)=>{
     //TODO: Create
-    res.status(200).send(req.body)
+    const restaurant = restaurantController.createRestaurant(req.body)
+    res.status(200).send(restaurant)
 })
 
 router.put("/:id", async(req, res)=>{
     //TODO: Update
-    const restaurant = req.body
-    console.log(restaurant)
+    const id = req.params.id
+    const body = req.body
 
+    restaurantController.updateRestaurant(id, body)
     res.status(204)
 })
 
 router.delete("/:id", async(req, res)=>{
     //TODO: Delete
-    const id = res.params.id
-    console.log(id)
+    const id = req.params.id
 
+    restaurantController.deleteRestaurant(id)
     res.status(204)
 })
 

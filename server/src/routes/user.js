@@ -1,36 +1,39 @@
 const express = require("express");
 const router = express.Router()
-const User = require('../models/user')
+const userController = require('../controllers/user')
 
 router.get("/", async(req, res)=>{
     //TODO: Get all
-    res.status(200).send(User)
+    const users = userController.getUsers()
+    res.status(200).send(users)
 })
 
 router.get("/:id", async(req, res)=>{
     //TODO: Get one by id
-    const user = User.filter((x)=>x._id === req.params.id)[0]
+    const user = userController.getUserById(req.params.id)
     res.status(200).send(user)
 })
 
 router.post("/", async(req, res)=>{
     //TODO: Create
-    res.status(200).send(req.body)
+    const user = userController.createUser(req.body)
+    res.status(200).send(user)
 })
 
 router.put("/:id", async(req, res)=>{
     //TODO: Update
-    const user = req.body
-    console.log(user)
+    const id = req.params.id
+    const body = req.body
 
+    userController.updateUser(id, body)
     res.status(204)
 })
 
 router.delete("/:id", async(req, res)=>{
     //TODO: Delete
-    const id = res.params.id
-    console.log(id)
+    const id = req.params.id
 
+    userController.deleteUser(id)
     res.status(204)
 })
 

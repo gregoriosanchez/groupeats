@@ -1,36 +1,39 @@
 const express = require("express");
 const router = express.Router()
-const PersonalInformation = require('../models/personalInformation')
+const personalInformationController = require('../controllers/personalInformation')
 
 router.get("/", async(req, res)=>{
     //TODO: Get all
-    res.status(200).send(PersonalInformation)
+    const personalInformations = personalInformationController.getPersonalInformations()
+    res.status(200).send(personalInformations)
 })
 
 router.get("/:id", async(req, res)=>{
     //TODO: Get one by id
-    const personalInformation = PersonalInformation.filter((x)=>x._id === req.params.id)[0]
+    const personalInformation = personalInformationController.getPersonalInformationById(req.params.id)
     res.status(200).send(personalInformation)
 })
 
 router.post("/", async(req, res)=>{
     //TODO: Create
-    res.status(200).send(req.body)
+    const personalInformation = personalInformationController.createPersonalInformation(req.body)
+    res.status(200).send(personalInformation)
 })
 
 router.put("/:id", async(req, res)=>{
     //TODO: Update
-    const personalInfo = req.body
-    console.log(personalInfo)
+    const id = req.params.id
+    const body = req.body
 
+    personalInformationController.updatePersonalInformation(id, body)
     res.status(204)
 })
 
 router.delete("/:id", async(req, res)=>{
     //TODO: Delete
-    const id = res.params.id
-    console.log(id)
+    const id = req.params.id
 
+    personalInformationController.deletePersonalInformation(id)
     res.status(204)
 })
 
