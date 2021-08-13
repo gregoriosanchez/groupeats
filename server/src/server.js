@@ -1,24 +1,37 @@
 const express = require('express')
 const cors = require('cors')
 
+//Import routes
+const userRoute = require('./routes/user')
+const personalInfoRoute = require('./routes/personalInformation')
+const restaurantRoute = require('./routes/restaurant')
+
 //Constants
 const PORT = '5050'
 
 //Express instance
 const app = express()
 
-//Plugins
+//Apply Plugins
 app.use(express.json())
 app.use(cors())
 
-app.get('*', (req, res)=>{
-    res.send('GROUP-EATS')
+//Add routes
+app.use('/api/user', userRoute)
+app.use('/api/personal-info', personalInfoRoute)
+app.use('/api/restaurant', restaurantRoute)
+
+app.get('/', (req, res)=>{
+    res.send('Server is healthy')
+})
+
+app.get('/api', (req, res)=>{
+    res.send('Server is healthy')
 })
 
 //Listener
 app.listen(PORT, ()=>{
     console.log(`Listening at http://localhost:${PORT}`)
 })
-
 
 module.exports = app
