@@ -2,17 +2,17 @@
 ## Installation
 * Client
 
-`cd ./client'
+`cd ./client`
 
-'npm i`
+`npm i`
 
 `npm run start`
 
 * Server
 
-`cd ./server'
+`cd ./server`
 
-'npm i` 
+`npm i` 
 
 `npm run start`
 
