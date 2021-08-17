@@ -1,6 +1,7 @@
 # groupeats
 ## Installation
 * Client
+
 `cd ./client'
 
 'npm i`
@@ -8,6 +9,7 @@
 `npm run start`
 
 * Server
+
 `cd ./server'
 
 'npm i` 
