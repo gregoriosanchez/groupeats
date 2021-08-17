@@ -29,7 +29,7 @@ router.put("/:id", async(req, res)=>{
     res.status(204)
 })
 
-router.delete("/:id", async(req, res)=>{
+router.delete("/:id", async(req, res)=>{ 
     //TODO: Delete
     const id = req.params.id
 

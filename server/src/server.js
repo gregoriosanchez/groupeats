@@ -5,6 +5,7 @@ const cors = require('cors')
 const userRoute = require('./routes/user')
 const personalInfoRoute = require('./routes/personalInformation')
 const restaurantRoute = require('./routes/restaurant')
+const authenticationRoute = require('./routes/authentication')
 
 //Constants
 const PORT = '5050'
@@ -20,6 +21,7 @@ app.use(cors())
 app.use('/api/user', userRoute)
 app.use('/api/personal-info', personalInfoRoute)
 app.use('/api/restaurant', restaurantRoute)
+app.use('/api/auth', authenticationRoute)
 
 app.get('/', (req, res)=>{
     res.send('Server is healthy')
